@@ -55,7 +55,7 @@ router.get('/:idx', (req, res)=> {
     let dinoIndex = req.params.idx
     console.log(dinoData[dinoIndex])
 
-    res.render('/show.ejs', {myDino: dinoData[dinoIndex]})
+    res.render('dinosaurs/show.ejs', {myDino: dinoData[dinoIndex]})
 })
 
 //post route

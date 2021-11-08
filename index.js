@@ -20,25 +20,12 @@ app.get('/', (req, res) => {
 
 app.use('/dinosaurs', require('./controllers/dinosaurs.js'))
 
+app.use('/prehistoric_creatures', require('./controllers/prehistoric_creatures.js'))
 
 
 
  //<-----------------------------End of Dino Stuff--------------------------------------------->>
 //display prehistoric creatures
-app.get('/prehistoric_creatures', (req, res)=> {
-    let creatures = fs.readFileSync('./prehistoric_creatures.json')
-    let creaturesData = JSON.parse(creatures)
-    console.log(creaturesData)
-    res.render('prehistoric_creatures/index', {creatures: creaturesData})
-})
-
-
-
-
-
-
-
-
 
 
 
